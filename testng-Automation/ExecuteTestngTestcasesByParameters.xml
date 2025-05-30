@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="parameters for Users">
+        <parameter name="user" value="demoUser12345"></parameter>
+        <classes>
+            <class name="com.sgtesting.parameters.Users"></class>
+        </classes>
+    </test>
+</suite>
