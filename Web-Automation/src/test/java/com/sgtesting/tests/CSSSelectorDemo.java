@@ -2,7 +2,10 @@ package com.sgtesting.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 public class CSSSelectorDemo {
 
@@ -17,7 +20,15 @@ public class CSSSelectorDemo {
     //    relativeCssUsingTagNameWithClassAttributeValue();
     //    relativeCssUsingClassAttributeValue();
     //    relativeCssUsingTagNameWithAttributeNameValue();
-        relativeCssUsingAttributeNameValue();
+    //    relativeCssUsingAttributeNameValue();
+    //    relativeCssUsingPartialAttributeValue();
+    //    relativeCssUsingTagNameWithMultipleAttributeNameValue();
+    //    relativeCssUsingTagNameWithAttributeName_01();
+    //    relativeCssUsingTagNameWithAttributeName_02();
+    //    relativeCssUsingTagNameWithAttributeName_03();
+    //    relativeCssUsingTagNameWithAttributeName_04();
+    //    relativeCssUsingNthChildConcept();
+        relativeCssUsingSiblingConcept();
     }
 
     private static void launchBrowser()
@@ -105,12 +116,120 @@ public class CSSSelectorDemo {
 
     /**
      * relative CSS
-     * Case 7: Irrespective aof any tag using attributeName
+     * Case 7: Irrespective of any tag using attributeName
      *         and Attribute value combination identify the element
      * Syntax:  *[attributeName='attributeValue']
      */
     private static void relativeCssUsingAttributeNameValue()
     {
         oBrowser.findElement(By.cssSelector("*[type='button']")).click();
+    }
+
+    /**
+     * relative CSS
+     * Case 8: Partial Matching of Attribute Value to identify the element
+     *    starts-with: ^=
+     *    Ends-With:   $=
+     *    contains:    *=
+     * Syntax:
+     *    <tagName>[attributeName ^= 'attributeValue']
+     *    <tagName>[attributeName $= 'attributeValue']
+     *    <tagName>[attributeName *= 'attributeValue']
+     */
+    private static void relativeCssUsingPartialAttributeValue()
+    {
+     //   oBrowser.findElement(By.cssSelector("input[id ^= 'btn1']")).click();
+        oBrowser.findElement(By.cssSelector("input[id *= 'submit']")).click();
+    }
+
+    /**
+     * relative CSS
+     * Case 9: Identify Element using TagName with Multiple attributeName
+     *         and value combination
+     * Syntax:  <tagName>[attributeName='attributeValue']
+     */
+    private static void relativeCssUsingTagNameWithMultipleAttributeNameValue()
+    {
+        oBrowser.findElement(By.cssSelector("input[type='button'][value='Submit']")).click();
+    }
+
+    /**
+     * relative CSS
+     * Case 10: Identify Element using TagName with  attributeName
+     *
+     * Syntax:  <tagName>[attributeName]
+     */
+    private static void relativeCssUsingTagNameWithAttributeName_01()
+    {
+        // Find number of Links in the web Page
+        List<WebElement> links=oBrowser.findElements(By.cssSelector("a[href]"));
+        System.out.println("# of Links in the Application :"+links.size());
+    }
+
+    private static void relativeCssUsingTagNameWithAttributeName_02()
+    {
+        // Display NAme of Links in the web Page
+        List<WebElement> links=oBrowser.findElements(By.cssSelector("a[href]"));
+        for(int i=0;i<links.size();i++)
+        {
+            WebElement link=links.get(i);
+            String content=link.getText();
+            System.out.println("Link Name :"+content);
+        }
+    }
+
+    private static void relativeCssUsingTagNameWithAttributeName_03()
+    {
+        // Display NAme of Links in the web Page
+        List<WebElement> links=oBrowser.findElements(By.cssSelector("a[href]"));
+        for(int i=0;i<links.size();i++)
+        {
+            WebElement link=links.get(i);
+            String content=link.getText();
+            if(content.equals("SeleniumHQ"))
+            {
+                link.click();
+                break;
+            }
+        }
+    }
+
+    private static void relativeCssUsingTagNameWithAttributeName_04()
+    {
+        // StaleElementReferenceException: stale element reference:
+        // stale element not found
+        List<WebElement> links=oBrowser.findElements(By.cssSelector("a[href]"));
+        for(int i=0;i<links.size();i++)
+        {
+            WebElement link=links.get(i);
+            String content=link.getText();
+            if(content.equals("SeleniumHQ"))
+            {
+                link.click();
+            }
+        }
+    }
+
+    /**
+     * relative CSS
+     * Case 11: Identify Element using nth-child concept
+     * Syntax:  nth-child(number)
+     */
+    private static void relativeCssUsingNthChildConcept()
+    {
+        oBrowser.findElement(By.cssSelector("#frm3 :nth-child(1)")).sendKeys("FirstName01");
+        oBrowser.findElement(By.cssSelector("#frm3 :nth-child(5)")).sendKeys("FirstName05");
+        oBrowser.findElement(By.cssSelector("#frm3 :nth-child(10)")).sendKeys("FirstName010");
+        oBrowser.findElement(By.cssSelector("#frm3 :last-child")).sendKeys("FirstName010");
+    }
+
+    /**
+     * relative CSS
+     * Case 12: Identify Element using sibling concepts
+     * Syntax:  <element1> + <element2> +<element3>
+     */
+    private static void relativeCssUsingSiblingConcept()
+    {
+        oBrowser.findElement(By.cssSelector("#frm3 input + input + input + input")).sendKeys("FirstName01");
     }
 }
