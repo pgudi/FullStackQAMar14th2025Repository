@@ -9,7 +9,7 @@ public class ExecuteAutoItFileDemo {
     {
         try
         {
-            Runtime.getRuntime().exec("D:\\GitQARepository2\\CurrentWorkspace\\AutoIT\\FirstTestInAutoIt.exe");
+            Runtime.getRuntime().exec("D:\\GitQARepository2\\CurrentWorkspace\\AutoIT\\WriteContentAndSaveFile.exe");
         }catch (Exception e)
         {
             e.printStackTrace();
