@@ -1,0 +1,341 @@
+JavaScript Tutorial:
+--------------------
+Case 1: Display an Alert in a html Web Page
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     alert("Welcome to Java Scripting !!!");
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
++++++++++++++++++++++++++++++++++++++++++++
+Case 2:Display an Alert in a html Web Page with OK Cancel button
+
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     confirm("Do you want to Learn JavaSCript ?");
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
++++++++++++++++++++++++++++++++++++++++++++++
+Case 3: Hoe to display the output and how to get input in JavaScript
+
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     var name=prompt("Enter the Name of the City :");
+     document.write("The City Name :"+name);
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
+
+How to display the output in a console:
+
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     var name=prompt("Enter the Name of the City :");
+     console.log("The City Name :"+name);
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
+
++++++++++++++++++++++++++++++++++++++++++++++
+Case 4: Display teh value stored in the variables
+
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     var fname="Santosh";
+     var cityname="Bangalore";
+     document.write(fname+"   "+cityname);
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
+
+++++++++++++++++++++++++++++++++++++++++++++++
+Case 5: Conditional Statements
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     var age=22;
+     if(age>=18)
+     {
+        document.write("The Person is eligible for Voting !!!");
+     }
+     else
+     {
+        document.write("The Person is not eligible for Voting !!!");
+     }
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
+++++++++++++++++++++++++++++++++++++++
+Case 6: Switch Block Example
+
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     var ch='U';
+     switch(ch)
+     {
+        case 'A':case 'E':case 'I':case 'O':case 'U':
+             document.write(ch+" is a Vowel !!!");
+             break;
+        default:
+            document.write(ch+" is not a Vowel !!!");
+
+     }
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
+
+++++++++++++++++++++++++++++++++++++++
+Case 7: Looping Statement Example i.e For Loop
+
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     for(var i=10;i<=20;i++)
+     {
+        document.write(i+"<br/>");
+     }
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
+
+++++++++++++++++++++++++++++++++++++++
+Case 8: Looping Statement Example i.e While Loop
+
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     var i=1;
+     while(i<=10)
+     {
+        document.write(i+"<br/>");
+        i+=1;
+     }
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
+
+++++++++++++++++++++++++++++++++++++++
+Case 8: Looping Statement Example i.e Do While Loop
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     var i=21;
+     do
+     {
+        document.write(i+"<br/>");
+        i+=1;
+     }while(i<=31)
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
++++++++++++++++++++++++++++++++++++++++
+Case 8: Pattern design
+
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     for(var i=1;i<=3;i++)
+     {
+       for(var j=1;j<=5;j++)
+       {
+          document.write("#"+"  ");
+       }
+      document.write("<br/>");
+     }
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+
+</body>
+</html>
+++++++++++++++++++++++++++++++++++
+Case 9: Functions which do not return value
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     function displayEvenNums()
+     {
+        for(var i=10;i<=30;i++)
+        {
+           if(i%2==0) document.write(i+"<br/>");
+        }
+     }
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+ <input type="button" value="Execute" onclick="displayEvenNums()" />
+</body>
+</html>
++++++++++++++++++++++++++++++++++++++++++
+Case 10: Describe other events available in JavaScript
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     function displayEvenNums()
+     {
+        for(var i=10;i<=30;i++)
+        {
+           if(i%2==0) document.write(i+"<br/>");
+        }
+     }
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+ <input type="button" value="Execute" onmouseover="displayEvenNums()" />
+</body>
+</html>
+++++++++++++++++++++++++++++++++++++++++++++++++
+Case 11: Return value from Function : Use return value as parameter to other functions
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     function add1(x,y)
+     {
+        return (x+y);
+     }
+
+     function sub1(x,y)
+     {
+        return (x-y);
+     }
+
+     function multiplication(x,y)
+     {
+        var Res=(x*y);
+        document.write("Multiplication Result :"+Res);
+     }
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+ <input type="button" value="Execute" onclick="multiplication(add1(10,5),sub1(12,5))" />
+</body>
+</html>
+++++++++++++++++++++++++++++++++++++++++++++++++
+Case 11: Return value from Function : Use return value within the body of other functions
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     function add1(x,y)
+     {
+        return (x+y);
+     }
+
+     function sub1(x,y)
+     {
+        return (x-y);
+     }
+
+     function multiplication(x,y)
+     {
+        var a=add1(10,20);
+        var b=sub1(25,20);
+        var Res=(a*b);
+        document.write("Multiplication Result :"+Res);
+     }
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+ <input type="button" value="Execute" onclick="multiplication()" />
+</body>
+</html>
++++++++++++++++++++++++++++++++++++++++
+Case 12: JavaScript Objects
+<html>
+<head><title>Test Web Page</title>
+  <script>
+     var student={
+       "fname":"Santosh",
+       "age":22,
+       "city": "Bangalore"
+     };
+     document.write(student.fname+"<br/>");
+     document.write(student.city+"<br/>");
+  </script>
+</head>
+<body>
+ <h1 align="center">Sample Web Page</h1>
+ <p>Java is a programming language,It is used for developing applications...</p>
+ 
+</body>
+</html>
+++++++++++++++++++++++++++++++++++++++++
+case 13: document methods
+document.getElementById('id attribute value');
+document.getElementsByTagName('tag name');
+document.getElementsByName('name attribute ');
+document.getElementsByClassName('class attribute value');
+
+
+
+
+
+
+
+
